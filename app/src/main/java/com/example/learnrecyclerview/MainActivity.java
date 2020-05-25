@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        //Виджет RecyclerView не занимается размещением элементов на экране самостоятельно — он поручает эту задачу LayoutManager.
+        // Объект LayoutManager управляет позиционированием элементов,
+        // а также определяет поведение прокрутки.
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyAdapter());
     }
